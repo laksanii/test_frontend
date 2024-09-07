@@ -11,7 +11,7 @@ export default function Home() {
             columns={["Pokemon", "URL"]}
             search={true}
             pagination={{
-                limit: 5,
+                limit: 10,
                 server: {
                     url: (prev, page, limit) =>
                         `${prev}?limit=${limit}&offset=${page * limit}`,

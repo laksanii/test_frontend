@@ -287,18 +287,21 @@ export default function Home() {
                     </form>
                 </div>
             </Modal>
-            <div className="w-full min-h-screen space-y-4">
-                <div className="search space-y-2">
-                    <input
-                        type="search"
-                        name="search"
-                        id="search"
-                        className="border rounded-lg py-1 px-2 w-full"
-                        placeholder="Search ..."
-                        value={keyword}
-                        onChange={(e) => setKeyword(e.target.value)}
-                    />
-                    <div className="space-x-2">
+
+            <div className="w-full min-h-screen space-y-4 ">
+                <div className="search space-y-2 grid grid-cols-12 gap-2 items-center">
+                    <div className="xl:col-span-9 md:col-span-8 col-span-12">
+                        <input
+                            type="search"
+                            name="search"
+                            id="search"
+                            className="border rounded-lg py-1 px-2 w-full"
+                            placeholder="Search ..."
+                            value={keyword}
+                            onChange={(e) => setKeyword(e.target.value)}
+                        />
+                    </div>
+                    <div className="space-x-2 xl:col-span-3 md:col-span-4 col-span-12 flex justify-end">
                         <label htmlFor="order">Sort By:</label>
                         <select
                             name="sort"
